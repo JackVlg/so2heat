@@ -14,6 +14,6 @@ picam2.start()
 time.sleep(2)
 
 print("middle...")
-picam2.capture_file("image.jpg")
+picam2.capture_file("test.jpg")
 picam2.stop()
 print("stopped")
