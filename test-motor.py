@@ -19,3 +19,5 @@ sleep(2)
 
 wp.digitalWrite(PIN_WP_MOTOR_SPEED, False)
 wp.digitalWrite(PIN_WP_MOTOR_DIR, False)
+
+print("Hello")
