@@ -1,12 +1,9 @@
 import requests
 import time
-import random
 import json
-import base64
-import os
+import logging
 from requests.exceptions import ConnectTimeout, ConnectionError
 
-import so2heat_motor
 from so2heat_request import SO2HeatRequest, RequestEncoder
 
 timeout = 5
@@ -19,14 +16,21 @@ def makeRequest() :
 
 
 while True:
-    print("Next time")
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    log = logging.getLogger("main")
+    log.info("Next time")
 
     request = makeRequest()
 
     try:
         response = requests.post('https://127.0.0.2:8878/api/v1/what-we-will-', json=request, timeout=(4, 3))
     except ConnectTimeout as e:
-        print("Connection timed out")
+        log.info("Connection timed out")
+        timeout = 5
+    except ConnectionError as e:
+        log.info("Connection error")
+        timeout = 5
 
+    log.info("Sleeping...")
     time.sleep(timeout)
 
