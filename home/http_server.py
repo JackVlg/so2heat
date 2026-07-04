@@ -4,18 +4,6 @@ import threading
 import io
 from PIL import Image
 
-photoW = 10
-photoH = 10
-msg_queue = None
-
-
-def initialize(data):
-    global photoW, photoH, msg_queue
-    photoW = data.get("photoW")
-    photoH = data.get("photoH")
-    msg_queue = data.get("msg_queue")
-
-
 class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/api/v1/test':
