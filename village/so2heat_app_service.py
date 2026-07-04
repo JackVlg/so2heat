@@ -1,16 +1,18 @@
 import requests
 import time
-import json
 import logging
+import base64
 from requests.exceptions import ConnectTimeout, ConnectionError
 
-from so2heat_request import SO2HeatRequest, RequestEncoder
+from common.so2heat_request import SO2HeatRequest
 
 timeout = 5
 
 def makeRequest() :
     test_binary_array = bytearray("Hello", "utf-8")
-    result = json.dumps(SO2HeatRequest(test_binary_array), indent=4, cls=RequestEncoder)
+    b64 = base64.b64encode(test_binary_array)
+    req = SO2HeatRequest(b64)
+    result = req.model_dump_json(indent=2, exclude_none=True)
     print("result: ", result)
     return result
 

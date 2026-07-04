@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21b783a4-b9dc-4eae-9c16-466395e63432" name="Changes" comment="home changes">
+      <change afterPath="$PROJECT_DIR$/tests/test.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/so2heat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/so2heat.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eebase_tech_2026_04_18.crt" beforeDir="false" afterPath="$PROJECT_DIR$/home/eebase_tech_2026_04_18.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eebase_tech_2026_04_18.key" beforeDir="false" afterPath="$PROJECT_DIR$/home/eebase_tech_2026_04_18.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/home/house.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/so2heat_app_desktop.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/so2heat_app_desktop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/so2heat_app_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/village/so2heat_app_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/so2heat_camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/so2heat_camera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/so2heat_http_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/so2heat_http_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/so2heat_motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/so2heat_motor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/so2heat_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/so2heat_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/so2heat_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/so2heat_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/so2heat_servo.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/so2heat_servo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/soheat_response_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/soheat_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start-test-camera.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tests/start-test-camera.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-camera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-magnit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-magnit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-magnit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-magnit.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-motor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-motor.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-motor.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-motor2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-motor2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-servo.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-servo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/work.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/home/work.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,27 +67,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.so2heat-main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.so2heat_app_desktop.executor&quot;: &quot;Run&quot;,
-    &quot;Python.so2heat_app_service (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.so2heat_main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.so2heat_response.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.so2heat-main.executor": "Run",
+    "Python.so2heat_app_desktop.executor": "Run",
+    "Python.so2heat_app_service (1).executor": "Run",
+    "Python.so2heat_main (1).executor": "Run",
+    "Python.so2heat_request.executor": "Run",
+    "Python.so2heat_response (1).executor": "Run",
+    "Python.so2heat_response.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
-  <component name="RunManager" selected="Python.so2heat_app_desktop">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="T:\work\so2heat\common" />
+      <recent name="T:\work\so2heat\village" />
+      <recent name="T:\work\so2heat\tests" />
+      <recent name="T:\work\so2heat\home" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.so2heat_request">
     <configuration name="so2heat_app_desktop" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="so2heat" />
       <option name="ENV_FILES" value="" />
@@ -73,37 +107,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/home" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/so2heat_app_desktop.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="so2heat_app_service (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="so2heat" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/so2heat_app_service.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/home/so2heat_app_desktop.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -127,7 +137,55 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="D:\Work\so2heat\so2heat_app_service.py" />
+      <option name="SCRIPT_NAME" value="T:\work\so2heat\village\so2heat_app_service.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="so2heat_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="so2heat" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/so2heat_request.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="so2heat_response (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="so2heat" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/so2heat_response.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,7 +209,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/so2heat_response.py" />
+      <option name="SCRIPT_NAME" value="T:\work\so2heat\common\so2heat_response.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,37 +218,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="so2heat_service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="so2heat" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="D:\Work\so2heat\so2heat_service.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Python.so2heat_request" />
+      <item itemvalue="Python.so2heat_response (1)" />
+      <item itemvalue="Python.so2heat_app_desktop" />
+      <item itemvalue="Python.so2heat_app_service (1)" />
+      <item itemvalue="Python.so2heat_response" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.so2heat_request" />
+        <item itemvalue="Python.so2heat_response (1)" />
         <item itemvalue="Python.so2heat_app_desktop" />
         <item itemvalue="Python.so2heat_app_service (1)" />
         <item itemvalue="Python.so2heat_response" />
-        <item itemvalue="Python.so2heat_service" />
-        <item itemvalue="Python.so2heat_app_service" />
       </list>
     </recent_temporary>
   </component>
