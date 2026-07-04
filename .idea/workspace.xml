@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21b783a4-b9dc-4eae-9c16-466395e63432" name="Changes" comment="Добавил новые ключи">
-      <change afterPath="$PROJECT_DIR$/home/app_gui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/so2heat_app_desktop.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/app_desktop.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/so2heat_http_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/http_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/app_desktop.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/app_desktop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/http_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/http_server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +30,12 @@
     &quot;assignee&quot;: &quot;JackVlg&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/JackVlg/so2heat.git&quot;,
-    &quot;accountId&quot;: &quot;7779fc5c-57a5-49b4-ba4d-43232c1bdbb9&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/JackVlg/so2heat.git",
+    "accountId": "7c0daee2-5d95-441b-bc60-e82501ce0b70"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
   &quot;fromUser&quot;: false
@@ -50,6 +49,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.app_desktop (1).executor": "Run",
+    "Python.app_desktop.executor": "Run",
     "Python.so2heat-main.executor": "Run",
     "Python.so2heat_app_desktop.executor": "Run",
     "Python.so2heat_app_service (1).executor": "Run",
@@ -199,26 +199,24 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.app_desktop" />
+      <item itemvalue="Python.so2heat_app_service" />
       <item itemvalue="Python.app_desktop (1)" />
       <item itemvalue="Python.so2heat_request" />
       <item itemvalue="Python.so2heat_response (1)" />
-      <item itemvalue="Python.so2heat_app_desktop" />
-      <item itemvalue="Python.so2heat_app_service (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.app_desktop (1)" />
         <item itemvalue="Python.so2heat_request" />
         <item itemvalue="Python.so2heat_response (1)" />
-        <item itemvalue="Python.so2heat_app_desktop" />
-        <item itemvalue="Python.so2heat_app_service (1)" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-b63d5a1f7c97-b61e75351b1f-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.22158.340" />
+        <option value="bundled-python-sdk-024ed6589d45-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.23567.174" />
       </set>
     </attachedChunks>
   </component>

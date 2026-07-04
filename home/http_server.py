@@ -1,10 +1,19 @@
 import http.server
+import socketserver
 import ssl
 import threading
-import io
-from PIL import Image
+from collections.abc import Callable
+
+import _socket
+
+update_request_handler : Callable
 
 class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
+
+    def __init__(self, request: socketserver._RequestType, client_address: _socket._RetAddress,
+                 server: socketserver.BaseServer):
+        super().__init__(request, client_address, server)
+
     def do_GET(self):
         if self.path == '/api/v1/test':
             self.send_response(200)
@@ -22,22 +31,29 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
             content_type = self.headers.get('Content-Type', '')
             print(f"Incoming content type is {content_type}")
 
-            if content_type == 'image/jpeg' or content_type == 'image/png':
+            if content_type == 'application/json' :
                 content_length = int(self.headers['Content-Length'])
                 post_data = self.rfile.read(content_length)
+                s = post_data.decode('utf-8')
 
-                image = Image.open(io.BytesIO(post_data))
-                image = image.resize((photoW, photoH))
-                msg_queue.put(("image", image));
+                global update_request_handler
+                update_request_handler(s)
 
-            self.send_response(200)
-            self.send_header('Content-type', 'application/json; charset=utf-8')
-            self.end_headers()
-            response = '{"result":"status received"}'
-            self.wfile.write(response.encode('utf-8'))
-
+                self.send_response(200)
+                self.send_header('Content-type', 'application/json; charset=utf-8')
+                self.end_headers()
+                response = '{"result":"status received"}'
+                self.wfile.write(response.encode('utf-8'))
+                self.wfile.flush()
+            else :
+                self.send_response(406)
+                self.send_header('Content-type', 'text/plain; charset=utf-8')
+                response = 'Unknown content type'
+                self.wfile.write(response.encode('utf-8'))
+                self.wfile.flush()
 
 class StoppableHTTPServer:
+
     def __init__(self, host='localhost', port=8443, certfile='eebase_tech_2026_10_01.crt',
                  keyfile='eebase_tech_2026_10_01.key'):
         self.host = host
@@ -50,8 +66,7 @@ class StoppableHTTPServer:
     def start(self):
         """Starting HTTPS server in another thread"""
         # Используем встроенный ThreadingHTTPServer (без SSL)
-        handler = MyRequestHandler
-        self.server = http.server.ThreadingHTTPServer((self.host, self.port), handler)
+        self.server = http.server.ThreadingHTTPServer((self.host, self.port), MyRequestHandler)
 
         # Добавляем SSL поверх существующего сервера
         context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
@@ -72,4 +87,5 @@ class StoppableHTTPServer:
             if self.thread:
                 self.thread.join(timeout=5)
             print("Server stopped")
+
 

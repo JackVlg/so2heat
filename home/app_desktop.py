@@ -1,10 +1,6 @@
 from home import app_gui, http_server
 
-global photoW, photoH, imageLabel
-
-from PIL import ImageTk
-
-httpServer = http_server.StoppableHTTPServer()
+httpServer : http_server.StoppableHTTPServer
 
 def left_button_click():
     gui.set_label("Left pressed!")
@@ -22,15 +18,15 @@ def stop_http_button_click():
     gui.set_work_image()
     gui.set_label("Http server stopped!")
 
+def update_request_listener(content : str):
+    print('hello:', content)
+
 gui = app_gui.SO2HeatGUI(left_button_click,
                          right_button_click,
                          start_http_button_click,
                          stop_http_button_click)
+
+httpServer = http_server.StoppableHTTPServer()
+http_server.update_request_handler = update_request_listener
+
 gui.start()
-
-def image_handler(data):
-    print("image comming")
-    global photo3
-    photo3 = ImageTk.PhotoImage(data)
-    imageLabel.config(image=photo3)
-
