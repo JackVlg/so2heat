@@ -29,7 +29,6 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_POST(self):
         if self.path == '/api/v1/update-status':
             content_type = self.headers.get('Content-Type', '')
-            print(f"Incoming content type is {content_type}")
 
             if content_type == 'application/json' :
                 content_length = int(self.headers['Content-Length'])

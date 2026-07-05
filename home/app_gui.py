@@ -2,8 +2,8 @@ from PIL import Image, ImageTk
 import tkinter as tk
 
 class SO2HeatGUI :
-    photoW : int = 800
-    photoH : int = 600
+    photoW : int
+    photoH : int
 
     root = None
     houseImg = None
@@ -14,12 +14,13 @@ class SO2HeatGUI :
     housePhoto : ImageTk.PhotoImage
     workPhoto : ImageTk.PhotoImage
 
-    def __init__(self,
-                 on_left_button_press,
-                 on_right_button_press,
-                 on_start_button_press,
-                 on_stop_button_press):
+    image : Image
+    photo : ImageTk.PhotoImage
+
+    def __init__(self, on_left_button_press, on_right_button_press, on_start_button_press, on_stop_button_press, img_size):
         self.root = tk.Tk()
+        self.photoW = img_size[0]
+        self.photoH = img_size[1]
         self.root.title("Heat")
 
         self.houseImg = Image.open("house.jpg").resize((self.photoW, self.photoH))
@@ -57,6 +58,11 @@ class SO2HeatGUI :
 
     def set_work_image(self) :
         self.image_label.config(image=self.workPhoto)
+
+    def set_image(self, image : Image) :
+        self.image = image.resize((self.photoW, self.photoH), Image.Resampling.LANCZOS)
+        self.photo = ImageTk.PhotoImage(self.image)
+        self.image_label.config(image=self.photo)
 
     def start(self):
         self.root.mainloop()

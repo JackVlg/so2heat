@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21b783a4-b9dc-4eae-9c16-466395e63432" name="Changes" comment="Пофиксил передачу листенера">
-      <change afterPath="$PROJECT_DIR$/start_app_desktop.cmd" afterDir="false" />
+    <list default="true" id="21b783a4-b9dc-4eae-9c16-466395e63432" name="Changes" comment="Добавил в gitignore папку .idea">
+      <change afterPath="$PROJECT_DIR$/home/request_processor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/app_desktop.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/app_desktop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/app_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/app_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/http_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/http_server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,30 +47,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.app_desktop (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.app_desktop.executor&quot;: &quot;Run&quot;,
-    &quot;Python.so2heat-main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.so2heat_app_desktop.executor&quot;: &quot;Run&quot;,
-    &quot;Python.so2heat_app_service (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.so2heat_main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.so2heat_request.executor&quot;: &quot;Run&quot;,
-    &quot;Python.so2heat_response (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.so2heat_response.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.app_desktop (1).executor": "Run",
+    "Python.app_desktop.executor": "Run",
+    "Python.request_processor.executor": "Run",
+    "Python.so2heat-main.executor": "Run",
+    "Python.so2heat_app_desktop.executor": "Run",
+    "Python.so2heat_app_service (1).executor": "Run",
+    "Python.so2heat_main (1).executor": "Run",
+    "Python.so2heat_request.executor": "Run",
+    "Python.so2heat_response (1).executor": "Run",
+    "Python.so2heat_response.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="T:\work\so2heat\common" />
@@ -77,8 +81,8 @@
       <recent name="T:\work\so2heat\home" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app_desktop (1)">
-    <configuration name="app_desktop (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.app_desktop">
+    <configuration name="app_desktop" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="so2heat" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,7 +106,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="app_desktop" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="request_processor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="so2heat" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,7 +121,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="T:\work\so2heat\home\app_desktop.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/home/request_processor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,15 +203,16 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.app_desktop" />
+      <item itemvalue="Python.request_processor" />
       <item itemvalue="Python.so2heat_app_service" />
-      <item itemvalue="Python.app_desktop (1)" />
+      <item itemvalue="Python.app_desktop" />
       <item itemvalue="Python.so2heat_request" />
       <item itemvalue="Python.so2heat_response (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app_desktop (1)" />
+        <item itemvalue="Python.app_desktop" />
+        <item itemvalue="Python.request_processor" />
         <item itemvalue="Python.so2heat_request" />
         <item itemvalue="Python.so2heat_response (1)" />
       </list>
@@ -284,7 +289,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783195791917</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Сделал скрипт запуска программы">
+      <option name="closed" value="true" />
+      <created>1783265991419</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1783265991419</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Добавил в gitignore папку .idea">
+      <option name="closed" value="true" />
+      <created>1783266093694</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1783266093695</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +317,8 @@
     <MESSAGE value="Сделал сериализуемыми запрос и ответ" />
     <MESSAGE value="Добавил новые ключи" />
     <MESSAGE value="Пофиксил передачу листенера" />
-    <option name="LAST_COMMIT_MESSAGE" value="Пофиксил передачу листенера" />
+    <MESSAGE value="Сделал скрипт запуска программы" />
+    <MESSAGE value="Добавил в gitignore папку .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил в gitignore папку .idea" />
   </component>
 </project>
