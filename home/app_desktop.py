@@ -1,4 +1,8 @@
 from home import app_gui, http_server
+import os
+
+print("Working directory:", os.getcwd())
+print("PYTHONPATH:", os.environ.get('PYTHONPATH'))
 
 httpServer : http_server.StoppableHTTPServer
 

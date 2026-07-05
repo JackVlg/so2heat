@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21b783a4-b9dc-4eae-9c16-466395e63432" name="Changes" comment="Добавил новые ключи">
+    <list default="true" id="21b783a4-b9dc-4eae-9c16-466395e63432" name="Changes" comment="Пофиксил передачу листенера">
+      <change afterPath="$PROJECT_DIR$/start_app_desktop.cmd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/app_desktop.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/app_desktop.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/http_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/http_server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +30,12 @@
     &quot;assignee&quot;: &quot;JackVlg&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/JackVlg/so2heat.git",
-    "accountId": "7c0daee2-5d95-441b-bc60-e82501ce0b70"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JackVlg/so2heat.git&quot;,
+    &quot;accountId&quot;: &quot;7c0daee2-5d95-441b-bc60-e82501ce0b70&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
   &quot;fromUser&quot;: false
@@ -45,30 +45,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.app_desktop (1).executor": "Run",
-    "Python.app_desktop.executor": "Run",
-    "Python.so2heat-main.executor": "Run",
-    "Python.so2heat_app_desktop.executor": "Run",
-    "Python.so2heat_app_service (1).executor": "Run",
-    "Python.so2heat_main (1).executor": "Run",
-    "Python.so2heat_request.executor": "Run",
-    "Python.so2heat_response (1).executor": "Run",
-    "Python.so2heat_response.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.app_desktop (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.app_desktop.executor&quot;: &quot;Run&quot;,
+    &quot;Python.so2heat-main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.so2heat_app_desktop.executor&quot;: &quot;Run&quot;,
+    &quot;Python.so2heat_app_service (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.so2heat_main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.so2heat_request.executor&quot;: &quot;Run&quot;,
+    &quot;Python.so2heat_response (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.so2heat_response.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="T:\work\so2heat\common" />
@@ -276,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783179211766</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Пофиксил передачу листенера">
+      <option name="closed" value="true" />
+      <created>1783195791917</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1783195791917</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +295,7 @@
     <MESSAGE value="home changes" />
     <MESSAGE value="Сделал сериализуемыми запрос и ответ" />
     <MESSAGE value="Добавил новые ключи" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил новые ключи" />
+    <MESSAGE value="Пофиксил передачу листенера" />
+    <option name="LAST_COMMIT_MESSAGE" value="Пофиксил передачу листенера" />
   </component>
 </project>
