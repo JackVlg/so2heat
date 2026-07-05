@@ -2,8 +2,6 @@ from home import app_gui, http_server, request_processor
 import os
 from home.request_processor import RequestProcessor
 
-imgSize = (800, 600)
-
 print("Working directory:", os.getcwd())
 print("PYTHONPATH:", os.environ.get('PYTHONPATH'))
 
@@ -28,8 +26,7 @@ def stop_http_button_click():
 gui = app_gui.SO2HeatGUI(left_button_click,
                          right_button_click,
                          start_http_button_click,
-                         stop_http_button_click,
-                         imgSize)
+                         stop_http_button_click)
 
 request_processor = RequestProcessor(gui)
 
