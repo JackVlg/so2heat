@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21b783a4-b9dc-4eae-9c16-466395e63432" name="Changes" comment="Добавил в gitignore папку .idea">
+    <list default="true" id="21b783a4-b9dc-4eae-9c16-466395e63432" name="Changes" comment="Небольшой рефакторинг">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/app_desktop.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/app_desktop.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/http_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/http_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/request_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/update_request_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/app_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/app_gui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783266093695</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Небольшой рефакторинг">
+      <option name="closed" value="true" />
+      <created>1786385823512</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1786385823512</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +299,7 @@
     <MESSAGE value="Пофиксил передачу листенера" />
     <MESSAGE value="Сделал скрипт запуска программы" />
     <MESSAGE value="Добавил в gitignore папку .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил в gitignore папку .idea" />
+    <MESSAGE value="Небольшой рефакторинг" />
+    <option name="LAST_COMMIT_MESSAGE" value="Небольшой рефакторинг" />
   </component>
 </project>

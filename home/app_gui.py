@@ -19,7 +19,7 @@ class SO2HeatGUI :
     image : Image
     photo : ImageTk.PhotoImage
 
-    def __init__(self, on_left_button_press, on_right_button_press, on_start_button_press, on_stop_button_press):
+    def __init__(self, on_left_button_press, on_right_button_press, on_start_button_press, on_stop_button_press, on_central_button_press):
         self.root = tk.Tk()
         self.root.title("Heat")
 
@@ -44,11 +44,17 @@ class SO2HeatGUI :
         space = tk.Label(self.root, text="")
         space.pack()
 
-        left_button = tk.Button(self.root, text="Rotate left", command=on_left_button_press)
-        left_button.pack()
+        frame_buttons = tk.Frame(self.root)
+        frame_buttons.pack()
 
-        right_button = tk.Button(self.root, text="Rotate right", command=on_right_button_press)
-        right_button.pack()
+        left_button = tk.Button(frame_buttons, text="Rotate left", command=on_left_button_press)
+        left_button.grid(row=0, column=0, padx=5)
+
+        right_button = tk.Button(frame_buttons, text="Rotate right", command=on_right_button_press)
+        right_button.grid(row=0, column=2, padx=5)
+
+        press_button = tk.Button(frame_buttons, text="PRESS", command=on_central_button_press)
+        press_button.grid(row=0, column=1, padx=5)
 
     def set_label(self, txt : str) :
         self.label.config(text=txt)

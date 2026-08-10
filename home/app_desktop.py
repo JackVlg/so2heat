@@ -23,10 +23,14 @@ def stop_http_button_click():
     gui.set_work_image()
     gui.set_label("Http server stopped!")
 
+def central_button_click():
+    print("APPLY")
+
 gui = app_gui.SO2HeatGUI(left_button_click,
                          right_button_click,
                          start_http_button_click,
-                         stop_http_button_click)
+                         stop_http_button_click,
+                         central_button_click)
 
 update_request_processor = UpdateRequestProcessor(gui)
 
