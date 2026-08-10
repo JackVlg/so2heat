@@ -6,7 +6,15 @@ from collections.abc import Callable
 
 import _socket
 
+from common.so2heat_response import SO2HeatResponse
+
 update_request_handler : Callable
+
+def generate_response(hints : dict):
+    resp = SO2HeatResponse()
+    if hints['NEXT_TIMEOUT']:
+        resp.nextTimeout = hints['NEXT_TIMEOUT']
+    return resp
 
 class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
 
@@ -35,21 +43,28 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
                 post_data = self.rfile.read(content_length)
                 s = post_data.decode('utf-8')
 
+                response_hints= {}
+
                 global update_request_handler
-                update_request_handler(s)
+                update_request_handler(s, response_hints)
+                print(response_hints)
+                response = generate_response(response_hints)
+                print(response)
+
 
                 self.send_response(200)
                 self.send_header('Content-type', 'application/json; charset=utf-8')
                 self.end_headers()
-                response = '{"result":"status received"}'
-                self.wfile.write(response.encode('utf-8'))
+                response_json = response.model_dump_json(indent=2, exclude_none=True)
+                self.wfile.write(response_json.encode('utf-8'))
                 self.wfile.flush()
             else :
                 self.send_response(406)
                 self.send_header('Content-type', 'text/plain; charset=utf-8')
-                response = 'Unknown content type'
-                self.wfile.write(response.encode('utf-8'))
+                response_text = 'Unknown content type'
+                self.wfile.write(response_text.encode('utf-8'))
                 self.wfile.flush()
+
 
 class StoppableHTTPServer:
 

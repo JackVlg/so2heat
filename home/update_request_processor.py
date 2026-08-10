@@ -2,23 +2,26 @@ import io
 
 from common.so2heat_request import from_json_str
 import base64
-from PIL import Image, ImageTk
+from PIL import Image
 
+from common.so2heat_response import SO2HeatResponse
 from home import app_gui
 
 
-class RequestProcessor:
+class UpdateRequestProcessor:
     image : Image.Image
     gui: app_gui.SO2HeatGUI
 
     def __init__(self, gui : app_gui.SO2HeatGUI):
         self.gui = gui
 
-    def process_request(self, content):
+    def process_request(self, content, response_hints : dict):
         request = from_json_str(content)
         decoded_image = base64.standard_b64decode(request.photo)
         self.image = Image.open(io.BytesIO(decoded_image))
         self.gui.set_image(self.image)
+
+        response_hints["NEXT_TIMEOUT"] = 1
 
 if __name__ == "__main__":
     with open("t:/work/so2heat/tests/test.jpg", "rb") as image_file:

@@ -1,6 +1,6 @@
-from home import app_gui, http_server, request_processor
+from home import app_gui, http_server
 import os
-from home.request_processor import RequestProcessor
+from home.update_request_processor import UpdateRequestProcessor
 
 print("Working directory:", os.getcwd())
 print("PYTHONPATH:", os.environ.get('PYTHONPATH'))
@@ -28,9 +28,9 @@ gui = app_gui.SO2HeatGUI(left_button_click,
                          start_http_button_click,
                          stop_http_button_click)
 
-request_processor = RequestProcessor(gui)
+update_request_processor = UpdateRequestProcessor(gui)
 
 httpServer = http_server.StoppableHTTPServer()
-http_server.update_request_handler = request_processor.process_request
+http_server.update_request_handler = update_request_processor.process_request
 
 gui.start()
