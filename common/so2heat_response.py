@@ -1,5 +1,6 @@
+from typing import List
+
 from pydantic import BaseModel
-from common.soheat_command import SO2HeatCommand
 import json
 
 
@@ -11,21 +12,16 @@ def from_json_str(json_str: str):
 
 class SO2HeatResponse(BaseModel):
     status: str = 'Ok'
-    commands: list[SO2HeatCommand] = []
+    commands : List = []
     nextTimeout: int = 5
-
 
 if __name__ == "__main__":
     response = SO2HeatResponse()
 
-    cmd1_data = {"name": "PRESS BUTTON", "parameters": {"buttonName" : 'MAIN'}}
-    cmd1 = SO2HeatCommand(**cmd1_data)
-    response.commands.append(cmd1)
-
-    jsonStr = response.model_dump_json(indent=2, exclude_none=True)
-    print(jsonStr)
-
-    print("---------------------------")
-    restored = from_json_str(jsonStr)
+    rs1 = '{"status": "Ok","commands": [{"command_type": "PRESS_MAIN_BUTTON","parameters": {}},{"command_type": "ROTATE","parameters": {"rotateDirection": "RIGHT"}}],"nextTimeout": 1}'
+    restored = from_json_str(rs1)
     print(restored)
+
+    js = restored.model_dump_json(indent=2, exclude_none=True)
+    print(js)
 

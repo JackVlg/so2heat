@@ -10,11 +10,10 @@ from common.so2heat_response import SO2HeatResponse
 
 update_request_handler : Callable
 
-def generate_response(hints : dict):
-    resp = SO2HeatResponse()
+def process_response_hints(response : SO2HeatResponse, hints : dict):
     if hints['NEXT_TIMEOUT']:
-        resp.nextTimeout = hints['NEXT_TIMEOUT']
-    return resp
+        response.nextTimeout = hints['NEXT_TIMEOUT']
+    return response
 
 class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
 
@@ -46,16 +45,16 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
                 response_hints= {}
 
                 global update_request_handler
-                update_request_handler(s, response_hints)
+                res : SO2HeatResponse = update_request_handler(s, response_hints)
                 print(response_hints)
-                response = generate_response(response_hints)
-                print(response)
+                process_response_hints(res, response_hints)
+                print(res)
 
 
                 self.send_response(200)
                 self.send_header('Content-type', 'application/json; charset=utf-8')
                 self.end_headers()
-                response_json = response.model_dump_json(indent=2, exclude_none=True)
+                response_json = res.model_dump_json(indent=2, exclude_none=True)
                 self.wfile.write(response_json.encode('utf-8'))
                 self.wfile.flush()
             else :

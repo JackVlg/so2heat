@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21b783a4-b9dc-4eae-9c16-466395e63432" name="Changes" comment="Небольшой рефакторинг">
+    <list default="true" id="21b783a4-b9dc-4eae-9c16-466395e63432" name="Changes" comment="Доработал GUI">
+      <change afterPath="$PROJECT_DIR$/common/so2heat_types.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/command_buffer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/so2heat_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/so2heat_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/soheat_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/so2heat_command.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/app_desktop.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/app_desktop.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/app_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/app_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/http_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/http_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/update_request_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/update_request_processor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +84,7 @@
       <recent name="T:\work\so2heat\home" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app_desktop">
+  <component name="RunManager" selected="Python.so2heat_response">
     <configuration name="app_desktop" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="so2heat" />
       <option name="ENV_FILES" value="" />
@@ -152,6 +157,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="so2heat_response" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="so2heat" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/so2heat_response.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="update_request_processor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="so2heat" />
       <option name="ENV_FILES" value="" />
@@ -177,6 +206,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.so2heat_response" />
       <item itemvalue="Python.update_request_processor" />
       <item itemvalue="Python.so2heat_app_service" />
       <item itemvalue="Python.app_desktop" />
@@ -184,6 +214,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.so2heat_response" />
         <item itemvalue="Python.app_desktop" />
         <item itemvalue="Python.so2heat_request" />
         <item itemvalue="Python.update_request_processor" />
@@ -285,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786385823512</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Доработал GUI">
+      <option name="closed" value="true" />
+      <created>1786389787604</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1786389787604</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +339,7 @@
     <MESSAGE value="Сделал скрипт запуска программы" />
     <MESSAGE value="Добавил в gitignore папку .idea" />
     <MESSAGE value="Небольшой рефакторинг" />
-    <option name="LAST_COMMIT_MESSAGE" value="Небольшой рефакторинг" />
+    <MESSAGE value="Доработал GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Доработал GUI" />
   </component>
 </project>
