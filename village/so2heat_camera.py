@@ -1,3 +1,5 @@
+import io
+
 from picamera2 import Picamera2
 
 class SO2HeatCamera():
@@ -16,8 +18,9 @@ class SO2HeatCamera():
         print("Camera started")
 
     def capture(self):
-        buffer = self.camera.capture_buffer()
-        return buffer
+        buffer = io.BytesIO()
+        self.camera.capture_buffer(buffer, format='jpeg')
+        return buffer.getvalue()
 
     def stop(self):
         self.camera.stop()
