@@ -8,7 +8,7 @@ class SO2HeatCamera():
     log = None
 
     def __init__(self):
-        Picamera2.set_logging(level=Picamera2.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        Picamera2.set_logging(level=Picamera2.INFO, msg='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         self.log = logging.getLogger("main")
 
         self.camera = Picamera2()
