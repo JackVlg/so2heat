@@ -17,10 +17,10 @@ def set_servo_angle(gpio, angle):
     pulse_width = MIN_PULSE + (angle / 180.0) * (MAX_PULSE - MIN_PULSE)
     pi.set_servo_pulsewidth(gpio, pulse_width)
     
-set_servo_angle(4, 45)
+set_servo_angle(4, 50)
 sleep(0.3)
 set_servo_angle(4, 0)
-sleep(2)
+sleep(0.3)
 
 
 #servo = Servo(4)
