@@ -19,7 +19,7 @@ class SO2HeatCamera():
 
     def capture(self):
         buffer = io.BytesIO()
-        self.camera.capture_buffer(buffer, format='jpeg')
+        self.camera.capture_file(buffer, format='jpeg')
         return buffer.getvalue()
 
     def stop(self):
