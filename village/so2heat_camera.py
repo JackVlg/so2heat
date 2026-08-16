@@ -1,21 +1,24 @@
 import io
-
+import logging
 from picamera2 import Picamera2
 
 class SO2HeatCamera():
 
     camera : Picamera2
+    log = None
 
     def __init__(self):
+        log = logging.getLogger("main")
+
         self.camera = Picamera2()
-        print("Camera created")
+        self.log.info("Camera created")
 
         camera_config = self.camera.create_preview_configuration()
         self.camera.configure(camera_config)
-        print("Camera configured")
+        self.log.info("Camera configured")
 
         self.camera.start()
-        print("Camera started")
+        self.log.info("Camera started")
 
     def capture(self):
         buffer = io.BytesIO()
@@ -24,7 +27,7 @@ class SO2HeatCamera():
 
     def stop(self):
         self.camera.stop()
-        print("Camera stopped")
+        self.log.info("Camera stopped")
 
 if __name__ == "__main__":
     camera = SO2HeatCamera()
