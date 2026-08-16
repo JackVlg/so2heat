@@ -16,8 +16,8 @@ class SO2HeatCamera():
         print("Camera started")
 
     def capture(self):
-        img = self.camera.capture_array()
-        return img
+        buffer = self.camera.capture_buffer()
+        return buffer
 
     def stop(self):
         self.camera.stop()
