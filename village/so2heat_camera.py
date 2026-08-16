@@ -31,11 +31,12 @@ class SO2HeatCamera():
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    log = logging.getLogger("main")
 
     camera = SO2HeatCamera()
     try:
         photo = camera.capture()
-        print(type(photo))
+        log.info(type(photo))
     finally:
         camera.stop()
-    print("Module test finished")
+    log.info("Module test finished")
