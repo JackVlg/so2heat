@@ -8,7 +8,7 @@ class SO2HeatCamera():
     log = None
 
     def __init__(self):
-        log = logging.getLogger("main")
+        self.log = logging.getLogger("main")
 
         self.camera = Picamera2()
         self.log.info("Camera created")
