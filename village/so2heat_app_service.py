@@ -8,7 +8,7 @@ from requests.exceptions import ConnectTimeout, ConnectionError
 from common.so2heat_request import SO2HeatRequest
 from village.so2heat_camera import SO2HeatCamera
 
-timeout = 5
+timeout = 0.5
 
 camera : SO2HeatCamera
 
@@ -41,10 +41,10 @@ try:
             response = requests.post(home_url + '/api/v1/update-status', headers={'Content-Type': 'application/json'}, data=request, timeout=(4, 3))
         except ConnectTimeout as e:
             log.info("Connection timed out")
-            timeout = 0.5
+            timeout = 5
         except ConnectionError as e:
             log.info("Connection error")
-            timeout = 0.5
+            timeout = 5
 
         log.info("Sleeping...")
         time.sleep(timeout)
