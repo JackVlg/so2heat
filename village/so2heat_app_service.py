@@ -45,6 +45,7 @@ try:
             timeout = 5
         except ConnectionError as e:
             log.info("Connection error")
+            log.info(e)
             timeout = 5
 
         log.info("Sleeping...")
