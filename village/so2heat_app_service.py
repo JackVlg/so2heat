@@ -5,6 +5,8 @@ import time
 import logging
 import base64
 from requests.exceptions import ConnectTimeout, ConnectionError
+from urllib3.exceptions import ReadTimeoutError
+
 from common.so2heat_request import SO2HeatRequest
 from village.so2heat_camera import SO2HeatCamera
 
@@ -46,6 +48,9 @@ try:
         except ConnectionError as e:
             log.info("Connection error")
             log.info(e)
+            timeout = 5
+        except ReadTimeoutError as e:
+            log.info("Read timeout error")
             timeout = 5
 
         log.info("Sleeping...")
