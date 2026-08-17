@@ -1,38 +1,53 @@
+import sys
+
 import requests
 import time
 import logging
 import base64
 from requests.exceptions import ConnectTimeout, ConnectionError
-
 from common.so2heat_request import SO2HeatRequest
+from village.so2heat_camera import SO2HeatCamera
 
 timeout = 5
 
+camera : SO2HeatCamera
+
 def makeRequest() :
-    test_binary_array = bytearray("Hello", "utf-8")
-    b64 = base64.b64encode(test_binary_array)
-    req = SO2HeatRequest(b64)
+    global camera
+    photo = camera.capture()
+    b64 = base64.b64encode(photo)
+    req = SO2HeatRequest()
+    req.photo = b64.decode()
     result = req.model_dump_json(indent=2, exclude_none=True)
     print("result: ", result)
     return result
 
+# START
 
-while True:
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    log = logging.getLogger("main")
-    log.info("Next time")
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+log = logging.getLogger("main")
 
-    request = makeRequest()
+home_url = sys.argv[1]
+log.info("Home url is {}".format(home_url))
 
-    try:
-        response = requests.post('https://127.0.0.2:8878/api/v1/what-we-will-', json=request, timeout=(4, 3))
-    except ConnectTimeout as e:
-        log.info("Connection timed out")
-        timeout = 5
-    except ConnectionError as e:
-        log.info("Connection error")
-        timeout = 5
+camera = SO2HeatCamera()
 
-    log.info("Sleeping...")
-    time.sleep(timeout)
+try:
+    while True:
+        log.info("Next time")
 
+        request = makeRequest()
+
+        try:
+            response = requests.post(home_url + '/api/v1/update-status', json=request, timeout=(4, 3))
+        except ConnectTimeout as e:
+            log.info("Connection timed out")
+            timeout = 5
+        except ConnectionError as e:
+            log.info("Connection error")
+            timeout = 5
+
+        log.info("Sleeping...")
+        time.sleep(timeout)
+finally:
+    camera.stop()
