@@ -19,7 +19,6 @@ def makeRequest() :
     req = SO2HeatRequest()
     req.photo = b64.decode()
     result = req.model_dump_json(indent=2, exclude_none=True)
-    print("result: ", result)
     return result
 
 # START
