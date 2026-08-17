@@ -36,9 +36,10 @@ try:
         log.info("Next time")
 
         request = makeRequest()
+        print(type(request))
 
         try:
-            response = requests.post(home_url + '/api/v1/update-status', data=bytearray(request, "utf-8"), timeout=(4, 3))
+            response = requests.post(home_url + '/api/v1/update-status', headers={'Content-Type': 'application/json'}, data=request, timeout=(4, 3))
         except ConnectTimeout as e:
             log.info("Connection timed out")
             timeout = 5
