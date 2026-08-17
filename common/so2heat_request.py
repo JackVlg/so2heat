@@ -3,7 +3,6 @@ import base64
 import json
 
 def from_json_str(json_str: str):
-    print(json_str)
     fields_map = json.loads(json_str)
     restored_request = SO2HeatRequest(**fields_map)
     return restored_request

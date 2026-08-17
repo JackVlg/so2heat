@@ -42,10 +42,10 @@ try:
             response = requests.post(home_url + '/api/v1/update-status', headers={'Content-Type': 'application/json'}, data=request, timeout=(4, 3))
         except ConnectTimeout as e:
             log.info("Connection timed out")
-            timeout = 5
+            timeout = 0.5
         except ConnectionError as e:
             log.info("Connection error")
-            timeout = 5
+            timeout = 0.5
 
         log.info("Sleeping...")
         time.sleep(timeout)
