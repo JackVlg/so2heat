@@ -36,7 +36,6 @@ try:
         log.info("Next time")
 
         request = makeRequest()
-        print(type(request))
 
         try:
             response = requests.post(home_url + '/api/v1/update-status', headers={'Content-Type': 'application/json'}, data=request, timeout=(4, 3))
