@@ -67,7 +67,7 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
 
 class StoppableHTTPServer:
 
-    def __init__(self, host='localhost', port=8443, certfile='eebase_tech_2026_10_01.crt',
+    def __init__(self, host='0.0.0.0', port=8443, certfile='eebase_tech_2026_10_01.crt',
                  keyfile='eebase_tech_2026_10_01.key'):
         self.host = host
         self.port = port

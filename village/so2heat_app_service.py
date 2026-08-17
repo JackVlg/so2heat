@@ -38,7 +38,7 @@ try:
         request = makeRequest()
 
         try:
-            response = requests.post(home_url + '/api/v1/update-status', json=request, timeout=(4, 3))
+            response = requests.post(home_url + '/api/v1/update-status', data=request, timeout=(4, 3))
         except ConnectTimeout as e:
             log.info("Connection timed out")
             timeout = 5
