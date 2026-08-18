@@ -52,6 +52,9 @@ try:
         except ReadTimeoutError as e:
             log.info("Read timeout error")
             timeout = 5
+        except requests.exceptions.ReadTimeout as e:
+            log.info("Read timeout")
+            timeout = 5
 
         log.info("Sleeping...")
         time.sleep(timeout)
