@@ -51,6 +51,7 @@ class SO2HeatMotor:
             self.set_motor(0, STOP)
 
     def rotate(self, speed, duration):
+        self.log.info("rotate {}, {}".format(speed, duration))
         self.set_motor_simple(speed)
         time.sleep(duration)
 
