@@ -37,7 +37,7 @@ def right_button_click():
 
 def central_button_click():
     gui.set_label("Apply pressed!")
-    command = SO2HeatCommand(CommandType.PRESS_MAIN_BUTTON, {})
+    command = SO2HeatCommand(CommandType.PRESS_MAIN_BUTTON, {ParameterKeys.ANGLE : 50})
     global commands_buffer
     commands_buffer.addCommand(command)
 

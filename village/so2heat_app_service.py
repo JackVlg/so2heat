@@ -12,7 +12,6 @@ from village.so2heat_camera import SO2HeatCamera
 from village.so2heat_response_processor import SO2HeatResponseProcessor
 
 timeout = 0.5
-
 camera : SO2HeatCamera
 response_processor : SO2HeatResponseProcessor
 
