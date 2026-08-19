@@ -9,10 +9,12 @@ from urllib3.exceptions import ReadTimeoutError
 
 from common.so2heat_request import SO2HeatRequest
 from village.so2heat_camera import SO2HeatCamera
+from village.so2heat_response_processor import SO2HeatResponseProcessor
 
 timeout = 0.5
 
 camera : SO2HeatCamera
+response_processor : SO2HeatResponseProcessor
 
 def makeRequest() :
     global camera
@@ -32,6 +34,7 @@ home_url = sys.argv[1]
 log.info("Home url is {}".format(home_url))
 
 camera = SO2HeatCamera()
+response_processor = SO2HeatResponseProcessor()
 
 try:
     while True:
@@ -43,7 +46,8 @@ try:
             response = requests.post(home_url + '/api/v1/update-status', headers={'Content-Type': 'application/json'}, data=request, timeout=(4, 3), verify=False)
             response.raise_for_status()
             text_body = response.text
-            print("Текст ответа:", text_body)
+            response_hints : dict = response_processor.process(text_body)
+
             timeout = 1
         except ConnectTimeout as e:
             log.info("Connection timed out")
