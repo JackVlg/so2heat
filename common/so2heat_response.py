@@ -3,10 +3,16 @@ from typing import List
 from pydantic import BaseModel
 import json
 
+from common.so2heat_command import SO2HeatCommand
+
 
 def from_json_str(json_str: str):
     fields_map = json.loads(json_str)
     restored_response = SO2HeatResponse(**fields_map)
+    new_list = []
+    for item in restored_response.commands:
+        new_list.append(SO2HeatCommand(**item))
+    restored_response.commands = new_list
     return restored_response
 
 
