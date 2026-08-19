@@ -13,5 +13,10 @@ class SO2HeatResponseProcessor:
     def process(self, data : str):
         self.log.info("Processing response")
 
+        result_hints = {}
+
         response = so2heat_response.from_json_str(data)
-        print(response)
+        if response.nextTimeout is not None:
+            result_hints["NEXT_TIMEOUT"] = response.nextTimeout
+
+        return result_hints

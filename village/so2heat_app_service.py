@@ -48,7 +48,9 @@ try:
             text_body = response.text
             response_hints : dict = response_processor.process(text_body)
 
-            timeout = 1
+            timeout = 5
+            if "NEXT_TIMEOUT" in response_hints:
+                timeout = response_hints["NEXT_TIMEOUT"]
         except ConnectTimeout as e:
             log.info("Connection timed out")
             timeout = 5
