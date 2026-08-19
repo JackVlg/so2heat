@@ -1,12 +1,8 @@
 from enum import Enum
 
 class ParameterKeys:
-    ROTATE_DIRECTION = "rotateDirection"
     ROTATE_SPEED = "rotateSpeed"
-
-class RotateDirection(Enum):
-    LEFT = "LEFT"
-    RIGHT = "RIGHT"
+    ROTATE_DURATION = "rotateDuration"
 
 class CommandType(Enum):
     ROTATE = "ROTATE"

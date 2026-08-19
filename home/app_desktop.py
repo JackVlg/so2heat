@@ -1,5 +1,5 @@
 from common.so2heat_command import SO2HeatCommand
-from common.so2heat_types import CommandType, RotateDirection, ParameterKeys
+from common.so2heat_types import CommandType, ParameterKeys
 from home import app_gui, http_server, command_buffer
 import os
 
@@ -25,13 +25,13 @@ def stop_http_button_click():
 
 def left_button_click():
     gui.set_label("Left pressed!")
-    command = SO2HeatCommand(CommandType.ROTATE, {ParameterKeys.ROTATE_DIRECTION : RotateDirection.LEFT})
+    command = SO2HeatCommand(CommandType.ROTATE, {ParameterKeys.ROTATE_SPEED : 100, ParameterKeys.ROTATE_DURATION : 2})
     global commands_buffer
     commands_buffer.addCommand(command)
 
 def right_button_click():
     gui.set_label("Right pressed!")
-    command = SO2HeatCommand(CommandType.ROTATE, {ParameterKeys.ROTATE_DIRECTION : RotateDirection.RIGHT})
+    command = SO2HeatCommand(CommandType.ROTATE, {ParameterKeys.ROTATE_SPEED : -100, ParameterKeys.ROTATE_DURATION : 2})
     global commands_buffer
     commands_buffer.addCommand(command)
 
