@@ -25,6 +25,7 @@ class SO2HeatServo :
     def press_button(self, angle):
         self.log.info("Press button at angle {}".format(angle))
         self.set_servo_angle(4, angle)
+        sleep(0.3)
         self.set_servo_angle(4, 0)
 
     def stop(self):
