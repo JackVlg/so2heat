@@ -1,6 +1,6 @@
 import logging
 
-from common.so2heat_response import SO2HeatResponse
+from common import so2heat_response
 
 class SO2HeatResponseProcessor:
 
@@ -13,5 +13,5 @@ class SO2HeatResponseProcessor:
     def process(self, data : str):
         self.log.info("Processing response")
 
-        response = SO2HeatResponse.from_json_str(data)
+        response = so2heat_response.from_json_str(data)
         print(response)
