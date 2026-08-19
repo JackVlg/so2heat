@@ -41,6 +41,9 @@ try:
 
         try:
             response = requests.post(home_url + '/api/v1/update-status', headers={'Content-Type': 'application/json'}, data=request, timeout=(4, 3), verify=False)
+            response.raise_for_status()
+            text_body = response.text
+            print("Текст ответа:", text_body)
             timeout = 1
         except ConnectTimeout as e:
             log.info("Connection timed out")
