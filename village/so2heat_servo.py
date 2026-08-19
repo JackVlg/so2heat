@@ -23,9 +23,10 @@ class SO2HeatServo :
         self.pi.set_servo_pulsewidth(gpio, pulse_width)
 
     def press_button(self, angle):
+        self.log.info("Press button at angle {}".format(angle))
         self.set_servo_angle(4, angle)
         self.set_servo_angle(4, 0)
 
     def stop(self):
         self.pi.stop()
-        self.log.info("Stopped motor.")
+        self.log.info("Stopped servo.")
