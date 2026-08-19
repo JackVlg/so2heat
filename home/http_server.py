@@ -46,7 +46,6 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
 
                 global update_request_handler
                 res : SO2HeatResponse = update_request_handler(s, response_hints)
-                print(response_hints)
                 process_response_hints(res, response_hints)
 
                 self.send_response(200)

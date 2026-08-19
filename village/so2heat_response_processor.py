@@ -16,7 +16,12 @@ class SO2HeatResponseProcessor:
         result_hints = {}
 
         response = so2heat_response.from_json_str(data)
-        if response.nextTimeout is not None:
-            result_hints["NEXT_TIMEOUT"] = response.nextTimeout
+
+        if response.status == "Ok":
+            commands = response.commands
+            print(commands)
+
+            if response.nextTimeout is not None:
+                result_hints["NEXT_TIMEOUT"] = response.nextTimeout
 
         return result_hints
