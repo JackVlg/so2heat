@@ -28,6 +28,7 @@ class SO2HeatResponseProcessor:
             self.log.info(commands)
 
             for command in commands:
+                self.log.info(command)
                 if command.command_type == CommandType.ROTATE:
                     rotate_speed = command.parameters[ParameterKeys.ROTATE_SPEED]
                     rotate_duration = command.parameters[ParameterKeys.ROTATE_DURATION]
