@@ -20,8 +20,8 @@ class SO2HeatMotor:
 
     def __init__(self):
         self.log = logging.getLogger("SO2HeatMotor")
-        pi = pigpio.pi()  # Connect to local pigpio daemon
-        if not pi.connected:
+        self.pi = pigpio.pi()  # Connect to local pigpio daemon
+        if not self.pi.connected:
             self.log.info("Failed to connect to pigpio daemon. Run 'sudo pigpiod' first.")
             exit(0)
 
