@@ -69,3 +69,4 @@ try:
         time.sleep(timeout)
 finally:
     camera.stop()
+    response_processor.stop()

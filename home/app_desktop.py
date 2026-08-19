@@ -25,13 +25,13 @@ def stop_http_button_click():
 
 def left_button_click():
     gui.set_label("Left pressed!")
-    command = SO2HeatCommand(CommandType.ROTATE, {ParameterKeys.ROTATE_SPEED : 100, ParameterKeys.ROTATE_DURATION : 2})
+    command = SO2HeatCommand(CommandType.ROTATE, {ParameterKeys.ROTATE_SPEED : 50, ParameterKeys.ROTATE_DURATION : 0.5})
     global commands_buffer
     commands_buffer.addCommand(command)
 
 def right_button_click():
     gui.set_label("Right pressed!")
-    command = SO2HeatCommand(CommandType.ROTATE, {ParameterKeys.ROTATE_SPEED : -100, ParameterKeys.ROTATE_DURATION : 2})
+    command = SO2HeatCommand(CommandType.ROTATE, {ParameterKeys.ROTATE_SPEED : -50, ParameterKeys.ROTATE_DURATION : 0.5})
     global commands_buffer
     commands_buffer.addCommand(command)
 
