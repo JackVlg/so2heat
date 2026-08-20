@@ -46,4 +46,5 @@ class SO2HeatResponseProcessor:
 
     def stop(self):
         self.motor.stop()
+        self.servo.stop()
         self.log.info("Stopped response processor.")
